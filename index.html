@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Azad Home Stay — Comfortable Stays in the Heart of Mangalore</title>
+<meta name="description" content="Experience clean rooms, modern amenities, peaceful surroundings, and warm hospitality at Azad Home Stay, a spacious 5-bedroom villa in the heart of Mangalore." />
+<meta name="theme-color" content="#5bacd4" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Azad Home Stay — Comfortable Stays in the Heart of Mangalore" />
+<meta property="og:description" content="A spacious 5-bedroom villa with modern amenities and warm hospitality in the heart of Mangalore." />
+<meta property="og:image" content="assets/hero.jpg" />
+<meta property="og:site_name" content="Azad Home Stay" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Azad Home Stay — Mangalore" />
+<meta name="twitter:description" content="Comfortable rooms, modern amenities, warm hospitality in Mangalore." />
+<meta name="twitter:image" content="assets/hero.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="lib/glightbox.min.css" />
+
+<style>
+/* ============ TOKENS — Coastal / Bright / Airy ============ */
+:root{
+  --sky:#5bacd4; --sky-deep:#3f93bd; --sky-soft:#a9d6ec; --sky-wash:#e8f4fa;
+  --sea:#13384f; --sea-2:#1d4f6b; --ink:#16323f; --ink-soft:#4f6b78;
+  --sand:#fcf9f3; --sand-2:#f5efe4; --sand-3:#ece3d2;
+  --coral:#f08762; --coral-soft:#f6a98c; --shell:#fffefb;
+  --line:rgba(22,50,63,.10);
+  --shadow-xs:0 2px 10px rgba(19,56,79,.06);
+  --shadow-sm:0 10px 30px -12px rgba(19,56,79,.18);
+  --shadow-md:0 22px 50px -18px rgba(19,56,79,.28);
+  --shadow-lg:0 44px 90px -28px rgba(19,56,79,.40);
+  --shadow-sky:0 18px 40px -14px rgba(91,172,212,.55);
+  --shadow-coral:0 18px 40px -14px rgba(240,135,98,.5);
+  --r-sm:12px; --r-md:20px; --r-lg:30px; --r-xl:44px;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Outfit",-apple-system,BlinkMacSystemFont,sans-serif;
+  --maxw:1300px; --gut:clamp(20px,5vw,70px);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
+.lenis.lenis-stopped{overflow:hidden}
+body{
+  font-family:var(--sans); color:var(--ink); background:var(--sand);
+  line-height:1.7; overflow-x:clip; font-weight:400; font-size:17px;
+  -webkit-font-smoothing:antialiased; cursor:auto; position:relative;
+}
+/* subtle paper grain so backgrounds aren't dead-flat */
+body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E")}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacing:-.005em;color:var(--sea)}
+.js-tilt-glare{border-radius:inherit;overflow:hidden!important}
+::selection{background:var(--sky);color:var(--shell)}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--gut);position:relative;z-index:2}
+.eyebrow{font-family:var(--sans);font-weight:600;font-size:.74rem;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--coral);display:inline-flex;align-items:center;gap:.8em}
+.eyebrow::before{content:"";width:30px;height:2px;background:var(--coral);display:inline-block;border-radius:2px}
+.section{padding:clamp(72px,11vw,150px) 0;position:relative}
+.section-head{max-width:780px;margin-bottom:clamp(44px,6vw,76px)}
+.section-head h2{font-size:clamp(2.4rem,6vw,4.6rem);margin:.32em 0 .3em;font-weight:600}
+.section-head h2 em{font-style:italic;color:var(--sky-deep);font-weight:500}
+.section-head p{font-size:clamp(1.05rem,1.7vw,1.25rem);color:var(--ink-soft);max-width:58ch;font-weight:300}
+
+/* wave + organic section dividers */
+.wave-top{position:absolute;top:-1px;left:0;width:100%;line-height:0;z-index:2;transform:rotate(180deg)}
+.wave-bottom{position:absolute;bottom:-1px;left:0;width:100%;line-height:0;z-index:2}
+.wave-top svg,.wave-bottom svg{width:100%;height:clamp(40px,7vw,90px);display:block}
+
+/* ============ CUSTOM CURSOR ============ */
+.cursor-dot,.cursor-ring{position:fixed;top:0;left:0;border-radius:50%;pointer-events:none;z-index:9999;
+  transform:translate(-50%,-50%)}
+.cursor-dot{width:7px;height:7px;background:var(--coral)}
+.cursor-ring{width:40px;height:40px;border:1.5px solid var(--sky-deep);
+  transition:width .3s var(--ease),height .3s var(--ease),background .3s,opacity .3s}
+.cursor-ring.hover{width:64px;height:64px;background:rgba(91,172,212,.12);border-color:var(--sky)}
+body.using-cursor{cursor:none}
+body.using-cursor a,body.using-cursor button{cursor:none}
+@media (hover:none),(pointer:coarse){.cursor-dot,.cursor-ring{display:none!important}}
+
+.scroll-progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);
+  background:linear-gradient(90deg,var(--sky),var(--coral));z-index:1200}
+
+/* ============ HEADER ============ */
+header{position:fixed;inset:0 0 auto 0;z-index:1000;padding:24px 0;
+  transition:padding .4s var(--ease),background .4s,box-shadow .4s,backdrop-filter .4s}
+header.shrink{padding:12px 0;background:rgba(252,249,243,.85);
+  backdrop-filter:blur(16px) saturate(1.5);-webkit-backdrop-filter:blur(16px) saturate(1.5);
+  box-shadow:0 1px 0 var(--line),0 14px 34px -24px rgba(19,56,79,.5)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:13px;z-index:2}
+.brand img{height:48px;width:48px;border-radius:14px;transition:height .4s var(--ease),width .4s;
+  box-shadow:var(--shadow-xs)}
+header.shrink .brand img{height:42px;width:42px}
+.brand-txt{font-family:var(--serif);font-weight:700;font-size:1.4rem;color:var(--shell);
+  line-height:1;transition:color .4s;letter-spacing:.01em}
+.brand-txt small{display:block;font-family:var(--sans);font-weight:600;font-size:.58rem;
+  letter-spacing:.3em;text-transform:uppercase;color:var(--sky-soft);margin-top:4px}
+header.shrink .brand-txt{color:var(--sea)}
+header.shrink .brand-txt small{color:var(--sky-deep)}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+.nav-links a{position:relative;font-weight:500;font-size:.95rem;padding:9px 16px;border-radius:50px;
+  color:var(--shell);transition:color .35s,background .35s}
+header.shrink .nav-links a{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:16px;right:16px;bottom:5px;height:2px;
+  background:var(--coral);transform:scaleX(0);transform-origin:0;transition:transform .35s var(--ease);border-radius:2px}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-links a.active{color:var(--sky-soft)}
+header.shrink .nav-links a.active{color:var(--coral)}
+.btn-book-nav{margin-left:10px;background:var(--coral);color:var(--shell)!important;
+  padding:11px 24px!important;border-radius:50px;font-weight:600;box-shadow:var(--shadow-coral);
+  transition:transform .35s var(--ease),box-shadow .35s}
+.btn-book-nav::after{display:none}
+.btn-book-nav:hover{transform:translateY(-2px)}
+.burger{display:none;width:48px;height:48px;border-radius:14px;position:relative;z-index:1101;
+  background:rgba(252,249,243,.16);backdrop-filter:blur(6px)}
+header.shrink .burger{background:rgba(19,56,79,.07)}
+.burger span{position:absolute;left:13px;right:13px;height:2px;background:var(--shell);border-radius:2px;
+  transition:transform .4s var(--ease),opacity .3s,background .4s}
+header.shrink .burger span{background:var(--sea)}
+.burger span:nth-child(1){top:18px}.burger span:nth-child(2){top:24px}.burger span:nth-child(3){top:30px}
+body.menu-open .burger span{background:var(--shell)}
+body.menu-open .burger span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+body.menu-open .burger span:nth-child(2){opacity:0}
+body.menu-open .burger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.drawer{position:fixed;inset:0;z-index:1100;
+  background:linear-gradient(165deg,var(--sky-deep),var(--sea));
+  display:flex;flex-direction:column;justify-content:center;padding:0 var(--gut);
+  clip-path:circle(0% at calc(100% - 44px) 44px);transition:clip-path .6s var(--ease);pointer-events:none}
+body.menu-open .drawer{clip-path:circle(150% at calc(100% - 44px) 44px);pointer-events:auto}
+.drawer a{font-family:var(--serif);font-size:clamp(2rem,9vw,3rem);color:var(--shell);padding:10px 0;
+  opacity:0;transform:translateY(20px);transition:opacity .5s,transform .5s;font-weight:500}
+body.menu-open .drawer a{opacity:1;transform:none}
+body.menu-open .drawer a:nth-child(1){transition-delay:.15s}
+body.menu-open .drawer a:nth-child(2){transition-delay:.2s}
+body.menu-open .drawer a:nth-child(3){transition-delay:.25s}
+body.menu-open .drawer a:nth-child(4){transition-delay:.3s}
+body.menu-open .drawer a:nth-child(5){transition-delay:.35s}
+body.menu-open .drawer a:nth-child(6){transition-delay:.4s}
+body.menu-open .drawer a:nth-child(7){transition-delay:.45s}
+.drawer .drawer-cta{color:var(--coral-soft);margin-top:12px;font-style:italic}
+
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex;align-items:center;gap:.6em;font-weight:600;font-size:1rem;
+  padding:16px 32px;border-radius:50px;letter-spacing:.01em;position:relative;
+  transition:transform .4s var(--ease),box-shadow .4s,background .4s,color .4s}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:var(--coral);color:var(--shell);box-shadow:var(--shadow-coral)}
+.btn-primary:hover{transform:translateY(-3px) scale(1.01)}
+.btn-sky{background:var(--sky);color:var(--shell);box-shadow:var(--shadow-sky)}
+.btn-sky:hover{transform:translateY(-3px) scale(1.01);background:var(--sky-deep)}
+.btn-watch{background:var(--shell);color:var(--sky-deep);box-shadow:var(--shadow-md);font-weight:700}
+.btn-watch:hover{transform:translateY(-3px) scale(1.02);background:#fff;color:var(--sea)}
+.btn-watch svg{transition:transform .35s var(--ease)}
+.btn-watch:hover svg{transform:scale(1.2)}
+.btn-ghost{background:rgba(255,255,255,.12);color:var(--shell);border:1.5px solid rgba(255,255,255,.5);
+  backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:var(--shell);color:var(--sea);transform:translateY(-3px)}
+.btn-wa{background:#25b35e;color:#fff;box-shadow:0 16px 34px -14px rgba(37,179,94,.7)}
+.btn-wa:hover{transform:translateY(-3px) scale(1.01)}
+.btn-outline{background:transparent;color:var(--sea);border:1.5px solid var(--sea)}
+.btn-outline:hover{background:var(--sea);color:var(--shell);transform:translateY(-3px)}
+
+/* ============ HERO — asymmetric, editorial ============ */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;isolation:isolate;
+  background:linear-gradient(165deg,var(--sky-wash) 0%,var(--sand) 60%)}
+.hero-bg{position:absolute;inset:0;z-index:-3;will-change:transform}
+.hero-bg img{width:100%;height:112%;object-fit:cover;
+  animation:kenburns 28s ease-in-out infinite alternate}
+@keyframes kenburns{0%{transform:scale(1.05)}100%{transform:scale(1.15) translate(-1.5%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-2;
+  background:linear-gradient(100deg,rgba(12,40,56,.78) 0%,rgba(16,52,72,.5) 45%,rgba(91,172,212,.12) 100%)}
+.hero-inner{max-width:760px;padding-block:130px 120px}
+.hero-tag{display:inline-flex;align-items:center;gap:.7em;padding:9px 18px;border-radius:50px;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);
+  color:var(--shell);font-size:.78rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;margin-bottom:26px}
+.hero-tag .dot{width:8px;height:8px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 4px rgba(240,135,98,.3)}
+.hero h1{font-size:clamp(3rem,8.5vw,6.6rem);color:var(--shell);font-weight:600;
+  text-shadow:0 6px 50px rgba(0,0,0,.25);margin-bottom:.2em;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--sky-soft);font-weight:500;display:block}
+.hero .tagline{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,3vw,2.1rem);
+  color:var(--shell);opacity:.97;margin-bottom:.55em;font-weight:500}
+.hero .sub{font-size:clamp(1.05rem,1.8vw,1.22rem);color:rgba(255,255,255,.9);max-width:50ch;
+  margin-bottom:2.4em;font-weight:300}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
+.hero-anim>*{opacity:0;transform:translateY(36px);animation:heroUp .9s var(--ease) forwards}
+.hero-anim>*:nth-child(1){animation-delay:.1s}.hero-anim>*:nth-child(2){animation-delay:.22s}
+.hero-anim>*:nth-child(3){animation-delay:.34s}.hero-anim>*:nth-child(4){animation-delay:.46s}
+.hero-anim>*:nth-child(5){animation-delay:.58s}.hero-anim>*:nth-child(6){animation-delay:.7s}
+@keyframes heroUp{to{opacity:1;transform:none}}
+.hero-logo{height:78px;width:78px;border-radius:20px;margin-bottom:26px;
+  box-shadow:0 18px 50px -16px rgba(0,0,0,.5);border:2px solid rgba(255,255,255,.35)}
+.scroll-ind{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:3;
+  display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--shell)}
+.scroll-ind span{font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;opacity:.85}
+.scroll-ind .mouse{width:25px;height:40px;border:2px solid rgba(255,255,255,.6);border-radius:14px;position:relative}
+.scroll-ind .mouse::after{content:"";position:absolute;top:7px;left:50%;width:4px;height:8px;background:var(--shell);
+  border-radius:3px;transform:translateX(-50%);animation:wheel 1.7s infinite}
+@keyframes wheel{0%{opacity:1;top:7px}70%{opacity:0;top:18px}100%{opacity:0}}
+
+/* floating beachy orbs */
+.hero-float{position:absolute;border-radius:50%;filter:blur(3px);z-index:-1;opacity:.5}
+.f1{width:200px;height:200px;top:14%;right:8%;background:radial-gradient(circle,rgba(169,214,236,.6),transparent 70%);animation:float1 16s ease-in-out infinite}
+.f2{width:120px;height:120px;bottom:20%;right:26%;background:radial-gradient(circle,rgba(246,169,140,.5),transparent 70%);animation:float1 12s ease-in-out infinite reverse}
+@keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(-30px,34px)}}
+
+/* ============ REVEAL ============ */
+.reveal{opacity:0;transform:translateY(48px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal-d1{transition-delay:.1s}.reveal-d2{transition-delay:.2s}.reveal-d3{transition-delay:.3s}
+.reveal-d4{transition-delay:.4s}.reveal-d5{transition-delay:.5s}
+
+/* ============ ABOUT — asymmetric overlap ============ */
+.about{background:var(--sand);position:relative}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,100px);align-items:center}
+.about-copy h2{font-size:clamp(2.4rem,5vw,4rem);margin:.3em 0 .5em;font-weight:600}
+.about-copy h2 em{font-style:italic;color:var(--sky-deep);font-weight:500}
+.about-copy>p{font-size:1.15rem;color:var(--ink-soft);margin-bottom:2em;max-width:52ch;font-weight:300}
+.feat-list{list-style:none;display:grid;gap:12px}
+.feat-list li{display:flex;gap:16px;align-items:center;padding:16px 20px;border-radius:var(--r-md);
+  background:var(--shell);border:1px solid var(--line);box-shadow:var(--shadow-xs);
+  transition:transform .4s var(--ease),box-shadow .4s}
+.feat-list li:hover{transform:translateX(8px);box-shadow:var(--shadow-sm)}
+.feat-ic{flex:0 0 44px;height:44px;border-radius:13px;display:grid;place-items:center;
+  background:var(--sky-wash);color:var(--sky-deep)}
+.feat-ic svg{width:22px;height:22px}
+.feat-list li p{font-weight:500;font-size:1rem;color:var(--ink);line-height:1.4;font-family:var(--sans)}
+.about-visual{position:relative;padding:20px}
+.about-visual .img-main{border-radius:var(--r-lg);box-shadow:var(--shadow-lg);aspect-ratio:4/5;
+  object-fit:cover;width:100%;position:relative;z-index:2}
+.about-visual .img-sub{position:absolute;bottom:-24px;left:-24px;width:48%;border-radius:var(--r-md);
+  box-shadow:var(--shadow-md);border:7px solid var(--sand);aspect-ratio:1;object-fit:cover;z-index:3}
+.about-visual::before{content:"";position:absolute;top:-18px;right:-18px;width:64%;height:70%;
+  border:2.5px solid var(--sky);border-radius:var(--r-lg);z-index:1}
+.about-badge{position:absolute;top:6px;right:6px;background:var(--coral);color:var(--shell);
+  border-radius:50%;width:122px;height:122px;display:grid;place-items:center;text-align:center;
+  font-family:var(--serif);box-shadow:var(--shadow-coral);transform:rotate(-8deg);z-index:4}
+.about-badge b{display:block;font-size:1.9rem;line-height:1;font-weight:600}
+.about-badge small{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;font-family:var(--sans);
+  margin-top:4px;font-weight:600}
+
+/* ============ COUNTERS — clean, airy ============ */
+.counters{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:clamp(56px,8vw,90px)}
+.counter{text-align:center;padding:8px}
+.counter b{display:block;font-family:var(--serif);font-size:clamp(2.6rem,6vw,4rem);
+  color:var(--sky-deep);line-height:1;font-weight:600}
+.counter span{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);
+  margin-top:10px;display:block;font-weight:600}
+.counter+.counter{border-left:1px solid var(--line)}
+
+/* ============ SERVICES — bright cards on sky wash ============ */
+.services{background:linear-gradient(180deg,var(--sky-wash),var(--sand));position:relative}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:24px}
+.svc-card{background:var(--shell);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:36px 30px;transform-style:preserve-3d;will-change:transform;box-shadow:var(--shadow-xs);
+  transition:box-shadow .4s,border-color .4s;position:relative;overflow:hidden}
+.svc-card::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;
+  background:linear-gradient(90deg,var(--sky),var(--coral));transform:scaleX(0);transform-origin:0;
+  transition:transform .45s var(--ease)}
+.svc-card:hover{box-shadow:var(--shadow-md);border-color:transparent}
+.svc-card:hover::before{transform:scaleX(1)}
+.svc-ic{width:58px;height:58px;border-radius:17px;display:grid;place-items:center;
+  background:linear-gradient(145deg,var(--sky),var(--sky-deep));color:var(--shell);
+  margin-bottom:22px;transform:translateZ(40px);box-shadow:var(--shadow-sky)}
+.svc-ic svg{width:28px;height:28px}
+.svc-card h3{font-size:1.5rem;color:var(--sea);margin-bottom:10px;transform:translateZ(26px);font-weight:600}
+.svc-card p{font-size:1rem;color:var(--ink-soft);line-height:1.65;transform:translateZ(16px);font-weight:300;font-family:var(--sans)}
+
+/* ============ BOOKING ============ */
+.booking{background:var(--sand);position:relative}
+.book-card{background:var(--shell);border-radius:var(--r-xl);box-shadow:var(--shadow-lg);
+  padding:clamp(28px,5vw,64px);border:1px solid var(--line);position:relative;overflow:hidden}
+.book-card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;
+  background:linear-gradient(90deg,var(--sky),var(--coral),var(--sky-deep))}
+.stay-opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-bottom:40px}
+.stay-opt{border:2px solid var(--line);border-radius:var(--r-md);padding:24px 22px;text-align:left;
+  background:var(--sand);transition:border-color .35s,transform .35s var(--ease),box-shadow .35s;
+  display:flex;flex-direction:column;gap:10px;position:relative}
+.stay-opt:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+.stay-opt .so-ic{width:48px;height:48px;border-radius:13px;display:grid;place-items:center;
+  background:var(--sky-wash);color:var(--sky-deep);transition:background .35s,color .35s}
+.stay-opt .so-ic svg{width:24px;height:24px}
+.stay-opt b{font-family:var(--serif);font-size:1.4rem;color:var(--sea);font-weight:600}
+.stay-opt small{color:var(--ink-soft);font-size:.9rem;line-height:1.45;font-family:var(--sans)}
+.stay-opt .check{position:absolute;top:16px;right:16px;width:24px;height:24px;border-radius:50%;
+  border:2px solid var(--line);display:grid;place-items:center;opacity:.4;transition:.35s}
+.stay-opt .check svg{width:13px;height:13px;color:#fff;opacity:0;transition:.3s}
+.stay-opt.active{border-color:var(--coral);background:var(--shell);box-shadow:var(--shadow-sm)}
+.stay-opt.active .so-ic{background:var(--coral);color:#fff}
+.stay-opt.active .check{background:var(--coral);border-color:var(--coral);opacity:1}
+.stay-opt.active .check svg{opacity:1}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+.field label{font-weight:600;font-size:.88rem;color:var(--ink);font-family:var(--sans)}
+.field label .req{color:var(--coral)}
+.field input,.field select,.field textarea{font-family:var(--sans);font-size:1rem;padding:15px 17px;
+  border:1.5px solid var(--line);border-radius:var(--r-sm);background:var(--sand);color:var(--ink);
+  transition:border-color .3s,box-shadow .3s,background .3s;width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--sky);
+  background:var(--shell);box-shadow:0 0 0 4px rgba(91,172,212,.16)}
+.field textarea{resize:vertical;min-height:120px}
+.field input.err,.field select.err{border-color:var(--coral);box-shadow:0 0 0 4px rgba(240,135,98,.14)}
+.field .msg{font-size:.8rem;color:var(--coral);display:none}
+.field .msg.show{display:block}
+.book-submit{margin-top:34px}
+.book-submit .btn{width:100%;justify-content:center;font-size:1.1rem;padding:19px}
+.book-note{text-align:center;margin-top:16px;font-size:.88rem;color:var(--ink-soft);font-weight:300}
+
+/* ============ GALLERY ============ */
+.gallery{background:linear-gradient(180deg,var(--sand),var(--sky-wash));position:relative}
+.masonry{columns:3;column-gap:20px}
+.masonry .g-item{break-inside:avoid;margin-bottom:20px;border-radius:var(--r-md);overflow:hidden;
+  position:relative;display:block;box-shadow:var(--shadow-xs);transition:box-shadow .4s,transform .4s var(--ease)}
+.masonry .g-item img{width:100%;transition:transform .9s var(--ease);display:block}
+.masonry .g-item::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(19,56,79,.5),transparent 55%);opacity:0;transition:opacity .4s}
+.masonry .g-item .g-zoom{position:absolute;bottom:16px;left:16px;width:46px;height:46px;border-radius:50%;
+  background:rgba(255,255,255,.95);display:grid;place-items:center;opacity:0;transform:translateY(10px);
+  transition:opacity .4s,transform .4s var(--ease)}
+.masonry .g-item .g-zoom svg{width:20px;height:20px;color:var(--sky-deep)}
+.masonry .g-item:hover{box-shadow:var(--shadow-md);transform:translateY(-5px)}
+.masonry .g-item:hover img{transform:scale(1.09)}
+.masonry .g-item:hover::after{opacity:1}
+.masonry .g-item:hover .g-zoom{opacity:1;transform:none}
+
+/* ============ NEARBY ============ */
+.nearby{background:var(--sky-wash);position:relative}
+.near-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:24px}
+.near-card{border-radius:var(--r-lg);overflow:hidden;background:var(--shell);box-shadow:var(--shadow-xs);
+  transform-style:preserve-3d;will-change:transform;transition:box-shadow .4s;position:relative}
+.near-card .near-img{aspect-ratio:4/3;overflow:hidden;position:relative}
+.near-card .near-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.near-card:hover{box-shadow:var(--shadow-md)}
+.near-card:hover .near-img img{transform:scale(1.08)}
+.near-body{padding:22px 24px 26px;transform:translateZ(30px)}
+.near-body h3{font-size:1.5rem;color:var(--sea);margin-bottom:7px;font-weight:600}
+.near-body p{font-size:.95rem;color:var(--ink-soft);line-height:1.55;margin-bottom:16px;font-weight:300;font-family:var(--sans)}
+.near-link{font-weight:600;font-size:.82rem;color:var(--coral);display:inline-flex;align-items:center;gap:6px;
+  letter-spacing:.05em;text-transform:uppercase;font-family:var(--sans)}
+.near-link svg{width:15px;height:15px;transition:transform .35s var(--ease)}
+.near-card:hover .near-link svg{transform:translateX(5px)}
+
+/* ============ TESTIMONIALS — sea gradient ============ */
+.testi{background:linear-gradient(160deg,var(--sea),var(--sea-2));color:var(--shell);overflow:hidden;position:relative}
+.testi .eyebrow{color:var(--coral-soft)}.testi .eyebrow::before{background:var(--coral-soft)}
+.testi .section-head h2{color:var(--shell)}
+.testi .section-head h2 em{color:var(--sky-soft)}
+.testi-viewport{overflow:hidden;border-radius:var(--r-lg)}
+.testi-track{display:flex;transition:transform .7s var(--ease)}
+.testi-slide{flex:0 0 100%;padding:8px}
+.testi-quote{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:var(--r-lg);
+  padding:clamp(32px,5vw,60px);backdrop-filter:blur(8px);text-align:center}
+.testi-stars{color:var(--coral-soft);font-size:1.4rem;letter-spacing:4px;margin-bottom:22px}
+.testi-quote blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,3vw,2.1rem);
+  line-height:1.45;color:var(--shell);margin-bottom:28px;font-weight:500}
+.testi-author{display:flex;flex-direction:column;gap:3px}
+.testi-author b{font-family:var(--serif);font-size:1.3rem;color:var(--sky-soft);font-weight:600}
+.testi-author span{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;opacity:.75;font-family:var(--sans)}
+.testi-nav{display:flex;justify-content:center;align-items:center;gap:20px;margin-top:32px}
+.testi-arrow{width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(255,255,255,.4);
+  display:grid;place-items:center;color:var(--shell);transition:background .35s,transform .35s,border-color .35s}
+.testi-arrow:hover{background:var(--shell);color:var(--sea);border-color:var(--shell);transform:scale(1.06)}
+.testi-arrow svg{width:20px;height:20px}
+.testi-dots{display:flex;gap:9px}
+.testi-dot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.3);transition:.35s;cursor:pointer}
+.testi-dot.active{background:var(--coral-soft);width:30px;border-radius:5px}
+.review-cta{position:relative;margin-top:46px;text-align:center;padding:clamp(36px,6vw,60px) clamp(24px,5vw,50px);
+  border-radius:var(--r-lg);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);
+  backdrop-filter:blur(10px);overflow:hidden}
+.review-cta-glow{position:absolute;top:-60%;left:50%;transform:translateX(-50%);width:380px;height:380px;
+  background:radial-gradient(circle,rgba(91,172,212,.4),transparent 70%);pointer-events:none}
+.review-cta-g{position:relative;background:#fff;border-radius:14px;padding:8px;box-sizing:content-box;
+  box-shadow:var(--shadow-md);margin-bottom:18px}
+.review-cta h3{position:relative;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--shell);margin-bottom:12px}
+.review-cta p{position:relative;color:rgba(255,255,255,.82);max-width:46ch;margin:0 auto 18px;
+  font-weight:300;font-family:var(--sans)}
+.review-stars{position:relative;color:var(--coral-soft);font-size:1.5rem;letter-spacing:6px;margin-bottom:26px}
+.review-cta-btn{position:relative}
+.video-showcase{background:linear-gradient(180deg,var(--sky-wash),var(--sand));position:relative;scroll-margin-top:-40px}
+.video-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:22px;max-width:1080px;margin:0 auto}
+.video-frame{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg);
+  background:var(--sea)}
+.video-main{aspect-ratio:16/10}
+.video-sub{aspect-ratio:4/5}
+.video-frame video{width:100%;height:100%;object-fit:cover;display:block}
+.video-play{position:absolute;inset:0;margin:auto;width:80px;height:80px;border-radius:50%;
+  background:rgba(255,255,255,.92);color:var(--sky-deep);display:grid;place-items:center;
+  box-shadow:var(--shadow-md);transition:transform .35s var(--ease),background .35s,opacity .35s}
+.video-play svg{width:34px;height:34px;margin-left:4px}
+.video-play:hover{transform:scale(1.08);background:#fff}
+.video-play.hidden{opacity:0;pointer-events:none;transform:scale(.6)}
+@media (max-width:760px){.video-grid{grid-template-columns:1fr}
+  .video-main,.video-sub{aspect-ratio:16/10}.video-play{width:66px;height:66px}.video-play svg{width:26px;height:26px}}
+
+/* ============ LOCATION ============ */
+.location{background:var(--sand)}
+.loc-wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:0;border-radius:var(--r-xl);overflow:hidden;
+  box-shadow:var(--shadow-lg);background:var(--shell)}
+.loc-info{padding:clamp(36px,5vw,64px);display:flex;flex-direction:column;justify-content:center;
+  background:linear-gradient(160deg,var(--sky),var(--sky-deep));color:var(--shell)}
+.loc-info .eyebrow{color:var(--shell)}.loc-info .eyebrow::before{background:var(--shell)}
+.loc-info h2{font-size:clamp(2rem,4vw,3rem);color:var(--shell);margin:.35em 0 .5em;font-weight:600}
+.loc-info h2 em{font-style:italic;font-weight:500}
+.loc-info address{font-style:normal;font-size:1.1rem;line-height:1.7;color:rgba(255,255,255,.95);
+  margin-bottom:1.8em;font-weight:300}
+.loc-map{min-height:440px;position:relative}
+.loc-map iframe{width:100%;height:100%;border:0;position:absolute;inset:0}
+
+/* ============ CONTACT ============ */
+.contact{background:linear-gradient(180deg,var(--sand),var(--sky-wash));position:relative}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:24px}
+.con-card{background:var(--shell);border:1px solid var(--line);border-radius:var(--r-lg);padding:38px 30px;
+  text-align:center;transition:transform .4s var(--ease),box-shadow .4s;display:flex;flex-direction:column;
+  align-items:center;gap:8px;box-shadow:var(--shadow-xs)}
+.con-card:hover{transform:translateY(-7px);box-shadow:var(--shadow-md)}
+.con-ic{width:64px;height:64px;border-radius:19px;display:grid;place-items:center;margin-bottom:10px;
+  background:linear-gradient(145deg,var(--sky),var(--sky-deep));color:var(--shell)}
+.con-ic.wa{background:linear-gradient(145deg,#25b35e,#1a9c4f)}
+.con-ic.mail{background:linear-gradient(145deg,var(--coral),var(--coral-soft))}
+.con-ic svg{width:28px;height:28px}
+.con-card h3{font-size:1.4rem;color:var(--sea);font-weight:600}
+.con-card p{font-size:.92rem;color:var(--ink-soft);margin-bottom:10px;font-weight:300;font-family:var(--sans)}
+.con-card .con-act{font-weight:600;color:var(--coral);font-size:.98rem;margin-top:auto;
+  display:inline-flex;align-items:center;gap:6px;font-family:var(--sans)}
+.con-card .con-act svg{width:16px;height:16px}
+
+/* ============ FOOTER ============ */
+footer{background:linear-gradient(165deg,var(--sea),var(--sea-2));color:var(--shell);
+  padding:clamp(60px,8vw,96px) 0 32px;position:relative}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:clamp(32px,5vw,64px);margin-bottom:50px}
+.foot-brand{display:flex;align-items:center;gap:13px;margin-bottom:22px}
+.foot-brand img{height:56px;width:56px;border-radius:16px;border:2px solid rgba(169,214,236,.4)}
+.foot-brand b{font-family:var(--serif);font-size:1.6rem;font-weight:700}
+.foot-col p{color:rgba(255,255,255,.75);font-size:1rem;line-height:1.7;max-width:38ch;font-weight:300;font-family:var(--sans)}
+.foot-col h4{font-family:var(--sans);font-weight:700;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--sky-soft);margin-bottom:20px}
+.foot-col ul{list-style:none;display:grid;gap:12px}
+.foot-col ul a{color:rgba(255,255,255,.8);font-size:1rem;transition:color .3s,padding .3s;font-weight:300;font-family:var(--sans)}
+.foot-col ul a:hover{color:var(--coral-soft);padding-left:5px}
+.foot-social{display:flex;gap:12px;margin-top:20px}
+.foot-social a{width:44px;height:44px;border-radius:13px;background:rgba(255,255,255,.1);display:grid;
+  place-items:center;color:var(--shell);transition:background .35s,transform .35s,color .35s}
+.foot-social a:hover{background:var(--sky);color:var(--shell);transform:translateY(-3px)}
+.foot-social svg{width:19px;height:19px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.14);padding-top:28px;text-align:center;
+  font-size:.88rem;color:rgba(255,255,255,.6);font-family:var(--sans);font-weight:300}
+
+/* ============ FLOATING ============ */
+.fab-wa{position:fixed;right:24px;bottom:24px;z-index:900;width:62px;height:62px;border-radius:50%;
+  background:#25b35e;display:grid;place-items:center;color:#fff;box-shadow:0 14px 34px -8px rgba(37,179,94,.6);
+  transition:transform .4s var(--ease);animation:fabPulse 2.6s infinite}
+.fab-wa svg{width:31px;height:31px}
+.fab-wa:hover{transform:scale(1.1) rotate(6deg)}
+@keyframes fabPulse{0%{box-shadow:0 14px 34px -8px rgba(37,179,94,.6),0 0 0 0 rgba(37,179,94,.5)}
+  70%{box-shadow:0 14px 34px -8px rgba(37,179,94,.6),0 0 0 18px rgba(37,179,94,0)}
+  100%{box-shadow:0 14px 34px -8px rgba(37,179,94,.6),0 0 0 0 rgba(37,179,94,0)}}
+.to-top{position:fixed;left:24px;bottom:24px;z-index:900;width:52px;height:52px;border-radius:15px;
+  background:var(--sky);color:var(--shell);display:grid;place-items:center;box-shadow:var(--shadow-sky);
+  opacity:0;transform:translateY(20px) scale(.8);pointer-events:none;
+  transition:opacity .4s,transform .4s var(--ease),background .35s}
+.to-top.show{opacity:1;transform:none;pointer-events:auto}
+.to-top:hover{background:var(--sky-deep)}
+.to-top svg{width:22px;height:22px}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1024px){
+  .masonry{columns:2}
+  .about-grid{grid-template-columns:1fr;gap:80px}
+  .about-visual{max-width:460px;margin:0 auto}
+  .loc-wrap{grid-template-columns:1fr}
+  .loc-map{min-height:340px;order:2}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-col.about-foot{grid-column:1/-1}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .nav-links{display:none}
+  .burger{display:block}
+  .counters{grid-template-columns:1fr 1fr;gap:30px}
+  .counter:nth-child(3){border-left:none}
+  .counter+.counter{border-left:none}
+  .form-grid{grid-template-columns:1fr}
+  .masonry{columns:1}
+  .foot-grid{grid-template-columns:1fr;gap:42px}
+  .hero-inner{padding-block:124px 120px}
+  .testi-slide{padding:2px}
+  .about-badge{width:96px;height:96px;top:0;right:0}
+  .about-badge b{font-size:1.5rem}
+}
+@media (max-width:420px){
+  .hero-ctas .btn{width:100%;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;
+    transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1!important;transform:none!important}
+  .hero-bg img{animation:none}
+  .hero-anim>*{opacity:1!important;transform:none!important}
+  .cursor-dot,.cursor-ring{display:none!important}
+  .fab-wa{animation:none}
+}
+</style>
+</head>
+
+<body>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div class="scroll-progress"></div>
+
+<!-- ============ HEADER ============ -->
+<header id="header">
+  <div class="wrap nav">
+    <a href="#home" class="brand" aria-label="Azad Home Stay home">
+      <img src="assets/logo.png" alt="Azad Home Stay logo" />
+      <span class="brand-txt">Azad Home Stay<small>Mangalore</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#nearby">Nearby Places</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#booking" class="btn-book-nav">Book Now</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- mobile drawer -->
+<nav class="drawer" id="drawer" aria-label="Mobile navigation">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#nearby">Nearby Places</a>
+  <a href="#contact">Contact</a>
+  <a href="#booking" class="drawer-cta">Book Now →</a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg" id="heroBg">
+    <img src="assets/hero.jpg" alt="Azad Home Stay villa in Mangalore at golden hour" />
+  </div>
+  <div class="hero-float f1"></div>
+  <div class="hero-float f2"></div>
+  <div class="wrap">
+    <div class="hero-inner hero-anim">
+      <span class="hero-tag"><span class="dot"></span> Coastal Homestay · Mangalore</span>
+      <h1>Azad <em>Home Stay</em></h1>
+      <p class="tagline">Comfortable stays in the heart of Mangalore</p>
+      <p class="sub">Clean rooms, modern amenities, peaceful surroundings, and the kind of warm hospitality that makes you feel right at home by the coast.</p>
+      <div class="hero-ctas">
+        <a href="#booking" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg>
+          Book Now
+        </a>
+        <a href="https://wa.me/917022993505?text=Hi%20Azad%20Home%20Stay%2C%20I%27d%20like%20to%20book%20a%20stay.%20Please%20share%20availability%20and%20details." target="_blank" rel="noopener" class="btn btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5C9.9 9 9.4 7.7 9.2 7.2 9 6.7 8.8 6.7 8.6 6.7H8c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2z"/></svg>
+          Book on WhatsApp
+        </a>
+        <a href="#contact" class="btn btn-ghost">Contact Us</a>
+        <a href="#video" class="btn btn-watch">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M8 5v14l11-7z"/></svg>
+          Watch Tour
+        </a>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-ind" aria-label="Scroll down">
+    <span>Scroll</span><span class="mouse"></span>
+  </a>
+  <div class="wave-bottom"><svg viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path fill="var(--sand)" d="M0,40 C240,90 480,0 720,30 C960,60 1200,95 1440,45 L1440,90 L0,90 Z"/></svg></div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-copy">
+      <span class="eyebrow reveal">About Azad Home Stay</span>
+      <h2 class="reveal reveal-d1">Comfortable villa living <em>in Mangalore</em></h2>
+      <p class="reveal reveal-d2">Experience a peaceful and homely stay at Azad Home Stay with spacious interiors, modern facilities, and a relaxing atmosphere designed for families, groups, business travelers, and weekend guests in the heart of Mangalore city.</p>
+      <ul class="feat-list">
+        <li class="reveal reveal-d1"><span class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v11M21 7v11M3 12h18M6 7V5a2 2 0 012-2h8a2 2 0 012 2v2"/></svg></span><p>5 Spacious Bedrooms with Comfortable Interiors</p></li>
+        <li class="reveal reveal-d2"><span class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg></span><p>Dining Area, Hall &amp; Lounge Space for Relaxation</p></li>
+        <li class="reveal reveal-d3"><span class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v6a6 6 0 0012 0V2M9 22h6M12 14v8"/></svg></span><p>Kitchen Access &amp; Balcony Seating for a Homely Experience</p></li>
+        <li class="reveal reveal-d1"><span class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><p>Entertainment Facilities with Netflix &amp; Smart TV Access</p></li>
+        <li class="reveal reveal-d2"><span class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.5a10 10 0 0114 0M8.5 16a5 5 0 017 0M2 9a15 15 0 0120 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/></svg></span><p>Free High-Speed WiFi Throughout the Property</p></li>
+        <li class="reveal reveal-d3"><span class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17h14l-1.5-7H6.5L5 17zM9 17v3M15 17v3M7 10V7a5 5 0 0110 0v3"/></svg></span><p>Dedicated Parking Space for a Hassle-Free Stay</p></li>
+      </ul>
+    </div>
+    <div class="about-visual reveal reveal-d2">
+      <img class="img-main" src="assets/gallery/gallery-02.jpg" alt="Spacious interior at Azad Home Stay" data-tilt />
+      <img class="img-sub" src="assets/gallery/gallery-05.jpg" alt="Cozy lounge space at Azad Home Stay" />
+      <div class="about-badge"><span><b>5★</b><small>Hospitality</small></span></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="counters">
+      <div class="counter reveal reveal-d1"><b class="count" data-target="5">0</b><span>Spacious Bedrooms</span></div>
+      <div class="counter reveal reveal-d2"><b class="count" data-target="11" data-suffix="+">0</b><span>Premium Amenities</span></div>
+      <div class="counter reveal reveal-d3"><b class="count" data-target="500" data-suffix="+">0</b><span>Happy Guests</span></div>
+      <div class="counter reveal reveal-d4"><b class="count" data-target="100" data-suffix="%">0</b><span>Free WiFi &amp; Parking</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section services" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Amenities</span>
+      <h2>Experience comfort &amp; <em>coastal calm</em></h2>
+      <p>Discover our premium amenities designed for your perfect stay.</p>
+    </div>
+    <div class="svc-grid" id="svcGrid">
+      <!-- cards injected by JS for clean tilt wiring -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING ============ -->
+<section class="section booking" id="booking">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-inline:auto;text-align:center;max-width:720px">
+      <span class="eyebrow" style="justify-content:center">Reserve</span>
+      <h2>Book your <em>stay</em></h2>
+      <p style="margin-inline:auto">Choose your preferred stay option and share your booking details.</p>
+    </div>
+    <div class="book-card reveal reveal-d1">
+      <div class="stay-opts" id="stayOpts">
+        <button type="button" class="stay-opt active" data-stay="Premium AC Room">
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <span class="so-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h20M2 12h20M6 17h12M4 7v10M20 7v10"/></svg></span>
+          <b>Premium AC Room</b><small>Comfortable stay with modern amenities</small>
+        </button>
+        <button type="button" class="stay-opt" data-stay="Non-AC Room">
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <span class="so-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8l9-5 9 5v13M9 21v-6h6v6"/></svg></span>
+          <b>Non-AC Room</b><small>Affordable and comfortable stay option</small>
+        </button>
+        <button type="button" class="stay-opt" data-stay="Family Stay">
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <span class="so-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2 21v-2a5 5 0 015-5h4a5 5 0 015 5v2M16 14a4 4 0 016 3.5V21"/></svg></span>
+          <b>Family Stay</b><small>Perfect for family vacations and trips</small>
+        </button>
+        <button type="button" class="stay-opt" data-stay="Group Booking">
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <span class="so-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="8" r="2.5"/><circle cx="17" cy="8" r="2.5"/><circle cx="12" cy="7" r="2.5"/><path d="M2 20v-1a4 4 0 014-4M22 20v-1a4 4 0 00-4-4M8 20v-1a4 4 0 014-4 4 4 0 014 4v1"/></svg></span>
+          <b>Group Booking</b><small>Ideal for friends and group stays</small>
+        </button>
+      </div>
+
+      <form id="bookForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="checkin">Check-In Date <span class="req">*</span></label>
+            <input type="date" id="checkin" name="checkin" required />
+            <span class="msg">Please select a check-in date.</span>
+          </div>
+          <div class="field">
+            <label for="checkout">Check-Out Date <span class="req">*</span></label>
+            <input type="date" id="checkout" name="checkout" required />
+            <span class="msg">Please select a valid check-out date.</span>
+          </div>
+          <div class="field">
+            <label for="guests">Number of Guests <span class="req">*</span></label>
+            <select id="guests" name="guests" required>
+              <option value="">Select guests</option>
+              <option>1 Guest</option><option>2 Guests</option><option>3 Guests</option>
+              <option>4 Guests</option><option>5 Guests</option><option>6 Guests</option>
+              <option>7 Guests</option><option>8 Guests</option><option>9 Guests</option>
+              <option>10+ Guests</option>
+            </select>
+            <span class="msg">Please select the number of guests.</span>
+          </div>
+          <div class="field">
+            <label for="roomtype">Preferred Room Type</label>
+            <select id="roomtype" name="roomtype">
+              <option value="">No preference</option>
+              <option>AC Room</option><option>Non-AC Room</option>
+              <option>Family Room</option><option>Group / Multiple Rooms</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="name">Full Name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+            <span class="msg">Please enter your name.</span>
+          </div>
+          <div class="field">
+            <label for="email">Email Address <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            <span class="msg">Please enter a valid email address.</span>
+          </div>
+          <div class="field full">
+            <label for="phone">Phone Number <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required />
+            <span class="msg">Please enter your phone number.</span>
+          </div>
+          <div class="field full">
+            <label for="requests">Special Requests</label>
+            <textarea id="requests" name="requests" placeholder="Any special requirements or additional details"></textarea>
+          </div>
+        </div>
+        <div class="book-submit">
+          <button type="submit" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5C9.9 9 9.4 7.7 9.2 7.2 9 6.7 8.8 6.7 8.6 6.7H8c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2z"/></svg>
+            Book Your Stay
+          </button>
+          <p class="book-note">You'll be taken to WhatsApp with all your details pre-filled, ready to send to our team.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Gallery</span>
+      <h2>A glimpse <em>inside</em></h2>
+      <p>Explore our spaces — spacious rooms, warm interiors, and inviting corners crafted for a memorable stay.</p>
+    </div>
+    <div class="masonry" id="masonry"><!-- injected by JS --></div>
+  </div>
+</section>
+
+<!-- ============ VIDEO SHOWCASE ============ -->
+<section class="section video-showcase" id="video">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-inline:auto;text-align:center;max-width:680px">
+      <span class="eyebrow" style="justify-content:center">Take a Look Around</span>
+      <h2>Step inside <em>Azad Home Stay</em></h2>
+      <p style="margin-inline:auto">A little glimpse of the space, the light, and the calm — straight from our home to your screen.</p>
+    </div>
+    <div class="video-grid reveal reveal-d1">
+      <div class="video-frame video-main">
+        <video class="tour-vid" playsinline muted loop preload="metadata" poster="assets/hero.jpg">
+          <source src="assets/video/tour-1.mp4" type="video/mp4" />
+        </video>
+        <button class="video-play" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+      </div>
+      <div class="video-frame video-sub">
+        <video class="tour-vid" playsinline muted loop preload="metadata" poster="assets/gallery/gallery-07.jpg">
+          <source src="assets/video/tour-2.mp4" type="video/mp4" />
+        </video>
+        <button class="video-play" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:34px">
+      <a href="https://www.instagram.com/azad_homestay/" target="_blank" rel="noopener" class="btn btn-sky">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        See more on Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEARBY ============ -->
+<section class="section nearby" id="nearby">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Explore Mangalore</span>
+      <h2>Explore <em>nearby</em></h2>
+      <p>Discover beautiful beaches, temples, shopping destinations, and popular attractions located near Azad Home Stay for a memorable experience in Mangalore.</p>
+    </div>
+    <div class="near-grid" id="nearGrid"><!-- injected by JS --></div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section testi" id="testimonials">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-inline:auto;text-align:center;max-width:680px">
+      <span class="eyebrow" style="justify-content:center">Guest Stories</span>
+      <h2>Loved by guests <em>near &amp; far</em></h2>
+    </div>
+    <div class="testi-viewport reveal reveal-d1">
+      <div class="testi-track" id="testiTrack"><!-- injected by JS --></div>
+    </div>
+
+    <div class="review-cta reveal reveal-d2">
+      <div class="review-cta-glow"></div>
+      <svg class="review-cta-g" viewBox="0 0 24 24" width="46" height="46"><path fill="#4285F4" d="M22.5 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.9a5 5 0 01-2.2 3.3v2.7h3.6c2.1-2 3.2-4.8 3.2-7.8z"/><path fill="#34A853" d="M12 23c2.9 0 5.3-1 7.1-2.6l-3.6-2.7c-1 .7-2.3 1-3.5 1-2.7 0-5-1.8-5.8-4.3H2.5v2.7A10.7 10.7 0 0012 23z"/><path fill="#FBBC05" d="M6.2 14.4a6.3 6.3 0 010-4.1V7.6H2.5a10.6 10.6 0 000 9.5l3.7-2.7z"/><path fill="#EA4335" d="M12 5.4c1.5 0 2.9.5 4 1.5l3-3A10.3 10.3 0 002.5 7.6l3.7 2.7C7 7.7 9.3 5.4 12 5.4z"/></svg>
+      <h3>Enjoyed your stay with us?</h3>
+      <p>Your kind words mean the world to our little homestay. Share your experience and help fellow travellers discover Azad Home Stay.</p>
+      <div class="review-stars">★ ★ ★ ★ ★</div>
+      <a href="https://g.page/r/CX_FOo8SfL2FEBM/review" target="_blank" rel="noopener" class="btn btn-sky review-cta-btn">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6L12 2z"/></svg>
+        Leave us a Google Review
+      </a>
+    </div>
+    
+    <div class="testi-nav">
+      <button class="testi-arrow" id="testiPrev" aria-label="Previous review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="testi-dots" id="testiDots"></div>
+      <button class="testi-arrow" id="testiNext" aria-label="Next review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section class="section location" id="location">
+  <div class="wrap">
+    <div class="loc-wrap reveal">
+      <div class="loc-info">
+        <span class="eyebrow">Find Us</span>
+        <h2>In the heart of <em>Mangalore</em></h2>
+        <address>Muzaffar Manzil, New Attavar Road,<br/>Kaprigudda, Mangalore – 575001</address>
+        <a href="https://maps.app.goo.gl/ukL9KxU9Teq9FAad9" target="_blank" rel="noopener" class="btn btn-ghost" style="align-self:flex-start">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Get Directions
+        </a>
+      </div>
+      <div class="loc-map">
+        <iframe title="Azad Home Stay location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+          src="https://maps.google.com/maps?q=Kaprigudda%2C%20New%20Attavar%20Road%2C%20Mangalore%20575001&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-inline:auto;text-align:center;max-width:680px">
+      <span class="eyebrow" style="justify-content:center">Get in Touch</span>
+      <h2>We'd love to <em>host you</em></h2>
+      <p style="margin-inline:auto">Reach out any way you like — call, message, or email. We're always happy to help plan your stay.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="con-card reveal reveal-d1">
+        <span class="con-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></span>
+        <h3>Call Us Directly</h3>
+        <p>Speak with us right away for bookings &amp; queries.</p>
+        <a href="tel:+917022993505" class="con-act">+91 70229 93505 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="con-card reveal reveal-d2">
+        <span class="con-ic wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5C9.9 9 9.4 7.7 9.2 7.2 9 6.7 8.8 6.7 8.6 6.7H8c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2z"/></svg></span>
+        <h3>Book on WhatsApp</h3>
+        <p>Chat with us instantly to check availability.</p>
+        <a href="https://wa.me/917022993505?text=Hi%20Azad%20Home%20Stay%2C%20I%27d%20like%20to%20book%20a%20stay.%20Please%20share%20availability%20and%20details." target="_blank" rel="noopener" class="con-act">Message Us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="con-card reveal reveal-d3">
+        <span class="con-ic mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg></span>
+        <h3>Email Us</h3>
+        <p>Prefer to write? Send us an email anytime.</p>
+        <a href="mailto:info@azadhomestay.com" class="con-act">info@azadhomestay.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="con-card reveal reveal-d4">
+        <span class="con-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <h3>Visit Us</h3>
+        <p>Muzaffar Manzil, New Attavar Road, Kaprigudda, Mangalore – 575001</p>
+        <a href="https://maps.app.goo.gl/ukL9KxU9Teq9FAad9" target="_blank" rel="noopener" class="con-act">Get Directions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col about-foot">
+        <div class="foot-brand">
+          <img src="assets/logo.png" alt="Azad Home Stay logo" />
+          <b>Azad Home Stay</b>
+        </div>
+        <p>Azad Home Stay offers comfortable rooms, modern amenities, and warm hospitality in Mangalore, providing guests with a peaceful and memorable stay experience.</p>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/azad_homestay/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="https://maps.app.goo.gl/ukL9KxU9Teq9FAad9" target="_blank" rel="noopener" aria-label="Location on Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></a>
+          <a href="https://wa.me/917022993505" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5C9.9 9 9.4 7.7 9.2 7.2 9 6.7 8.8 6.7 8.6 6.7H8c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#nearby">Nearby Places</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="tel:+917022993505">+91 70229 93505</a></li>
+          <li><a href="mailto:info@azadhomestay.com">info@azadhomestay.com</a></li>
+          <li><a href="https://maps.app.goo.gl/ukL9KxU9Teq9FAad9" target="_blank" rel="noopener">New Attavar Road, Kaprigudda, Mangalore – 575001</a></li>
+          <li><a href="https://www.instagram.com/azad_homestay/" target="_blank" rel="noopener">@azad_homestay</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Azad Home Stay. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING ============ -->
+<a href="https://wa.me/917022993505?text=Hi%20Azad%20Home%20Stay%2C%20I%27m%20interested%20in%20staying%20with%20you.%20Could%20you%20share%20more%20details%3F" target="_blank" rel="noopener" class="fab-wa" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5C9.9 9 9.4 7.7 9.2 7.2 9 6.7 8.8 6.7 8.6 6.7H8c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2z"/></svg>
+</a>
+<button class="to-top" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<!-- ============ LIBRARIES ============ -->
+<script src="lib/gsap.min.js"></script>
+<script src="lib/ScrollTrigger.min.js"></script>
+<script src="lib/lenis.min.js"></script>
+<script src="lib/vanilla-tilt.min.js"></script>
+<script src="lib/glightbox.min.js"></script>
+
+<script>
+const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const TOUCH = window.matchMedia('(hover:none),(pointer:coarse)').matches;
+const WA_NUMBER = '917022993505';
+
+/* ---------- DATA ---------- */
+const SERVICES = [
+  ['Spacious 5 Bedroom Villa','Enjoy ample space with 5 well-designed bedrooms perfect for families and group stays.','M3 21V8l9-5 9 5v13M3 21h18M9 21v-6h6v6'],
+  ['AC & Non-AC Rooms','Choose between air-conditioned comfort or natural ventilation based on your preference.','M2 7h20M2 12h20M6 17h12M4 7v10M20 7v10'],
+  ['Private Balcony Rooms','Relax on private balconies with scenic views, perfect for morning tea or evening relaxation.','M3 21h18M5 21V10h14v11M9 21v-6h6v6M8 7l4-4 4 4'],
+  ['Netflix & Entertainment','Stay entertained with Netflix access and premium entertainment options in your room.','M2 4h20v13H2zM8 21h8M12 17v4'],
+  ['Dining Area','Comfortable and spacious dining area for family meals and gatherings.','M6 2v8a3 3 0 006 0V2M9 2v20M18 2c-1 0-2 2-2 5s1 4 2 4 2-1 2-4-1-5-2-5zM18 11v11'],
+  ['Fully Functional Kitchen','Modern, fully equipped kitchen with all necessary appliances for self-catering convenience.','M3 3h18v6H3zM3 9v12h18V9M8 3v6M8 13h.01M8 17h.01'],
+  ['Comfortable Hall & Living','Spacious and well-furnished living areas perfect for relaxation and socializing.','M3 18v-6a2 2 0 012-2h14a2 2 0 012 2v6M5 18v2M19 18v2M5 10V8a3 3 0 013-3h8a3 3 0 013 3v2'],
+  ['Free WiFi','High-speed internet access throughout the property to stay connected.','M5 12.5a10 10 0 0114 0M8.5 16a5 5 0 017 0M2 9a15 15 0 0120 0'],
+  ['Free Parking Facility','Secure and spacious parking area available free of charge for all guests.','M5 17h14l-1.5-7H6.5L5 17zM9 17v3M15 17v3M7 10V7a5 5 0 0110 0v3'],
+  ['Heart of Mangalore City','Conveniently located in the city center with easy access to attractions and markets.','M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0zM12 7v6M9 10h6'],
+  ['Ideal for Families & Groups','Perfect accommodation for families, friend groups, and corporate team outings.','M9 7a3 3 0 100 6 3 3 0 000-6zM2 21v-2a4 4 0 014-4h6a4 4 0 014 4v2M16 7a3 3 0 110 6M18 14a4 4 0 014 4v3']
+];
+
+const NEARBY = [
+  ['panambur-beach','Panambur Beach','One of Mangalore\'s most popular and well-maintained beaches, famous for dramatic sunsets and water sports.','https://commons.wikimedia.org/wiki/Category:Panambur_Beach'],
+  ['tannirbhavi-beach','Tannirbhavi Beach','A serene, scenic beach with pine groves — perfect for a peaceful evening by the Arabian Sea.','https://commons.wikimedia.org/wiki/Category:Tannirbhavi_Beach'],
+  ['city-centre-mall','City Centre Mall','Mangalore\'s premier shopping and entertainment destination with brands, dining, and a multiplex.','https://www.google.com/maps/search/City+Centre+Mall+Mangalore'],
+  ['kadri-temple','Kadri Manjunatha Temple','A historic temple dedicated to Lord Manjunatha, known for its ancient bronze idols and architecture.','https://www.google.com/maps/search/Kadri+Manjunatha+Temple+Mangalore'],
+  ['st-aloysius-chapel','St. Aloysius Chapel','A 19th-century chapel celebrated for its stunning interior frescoes painted by Antonio Moscheni.','https://www.google.com/maps/search/St+Aloysius+Chapel+Mangalore'],
+  ['nosh-cafe','Nosh Cafe','A cozy, popular cafe offering great coffee, comfort food, and a relaxed ambience.','https://www.google.com/maps/search/Nosh+Cafe+Mangalore'],
+  ['machali','Machali','A beloved coastal restaurant renowned for authentic Mangalorean seafood and local flavors.','https://www.google.com/maps/search/Machali+Restaurant+Mangalore'],
+  ['sultan-bathery','Sultan Bathery','A 16th-century watchtower of black stone built by Tipu Sultan, offering scenic riverside views.','https://www.google.com/maps/search/Sultan+Bathery+Mangalore']
+];
+
+const TESTIMONIALS = [
+  [5,'A truly homely stay! The rooms were spacious and spotless, and the hosts made us feel like family. Walking distance to the heart of the city made our Mangalore trip effortless.','Priya Nair','Family Stay · Bengaluru'],
+  [5,'We booked the whole villa for a group of friends and it was perfect. Great kitchen, comfy living areas, and fast WiFi. The balcony evenings were the highlight of our trip.','Rohan Shetty','Group Booking · Mumbai'],
+  [5,'Clean, peaceful, and very well located. The AC rooms were super comfortable in the Mangalore heat, and Netflix was a nice touch after a long day of sightseeing.','Aisha Khan','Premium AC Room · Hyderabad'],
+  [4,'Excellent value for a business trip. Quiet surroundings, dedicated parking, and everything within reach. The hosts responded instantly on WhatsApp. Highly recommend.','Vikram Rao','Business Traveler · Pune'],
+  [5,'Felt just like home, but better. Spacious bedrooms for our joint family, a lovely dining area, and warm hospitality throughout. We\'ll definitely be back next Dasara.','Deepa Pai','Family Stay · Udupi'],
+  [5,'Wonderful weekend getaway. Close to Panambur Beach and great local food nearby. The place is exactly as shown — genuine, comfortable, and welcoming.','Sandeep Kamath','Weekend Stay · Bengaluru']
+];
+
+/* ---------- INJECT SERVICES ---------- */
+const svgIcon = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="${d}"/></svg>`;
+document.getElementById('svcGrid').innerHTML = SERVICES.map((s,i)=>`
+  <article class="svc-card reveal reveal-d${(i%3)+1}" data-tilt>
+    <div class="svc-ic">${svgIcon(s[2])}</div>
+    <h3>${s[0]}</h3><p>${s[1]}</p>
+  </article>`).join('');
+
+/* ---------- INJECT GALLERY ---------- */
+document.getElementById('masonry').innerHTML = Array.from({length:18},(_,i)=>{
+  const n = String(i+1).padStart(2,'0');
+  return `<a href="assets/gallery/gallery-${n}.jpg" class="g-item glightbox reveal reveal-d${(i%3)+1}" data-gallery="azad" data-description="Azad Home Stay — Photo ${i+1}">
+    <img src="assets/gallery/gallery-${n}.jpg" alt="Azad Home Stay interior photo ${i+1}" loading="lazy" />
+    <span class="g-zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
+  </a>`;
+}).join('');
+
+/* ---------- INJECT NEARBY ---------- */
+document.getElementById('nearGrid').innerHTML = NEARBY.map((p,i)=>`
+  <article class="near-card reveal reveal-d${(i%3)+1}" data-tilt>
+    <div class="near-img"><img src="assets/nearby/${p[0]}.jpg" alt="${p[1]} near Azad Home Stay" loading="lazy" /></div>
+    <div class="near-body">
+      <h3>${p[1]}</h3><p>${p[2]}</p>
+      <a class="near-link" href="${p[3]}" target="_blank" rel="noopener">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </article>`).join('');
+
+/* ---------- INJECT TESTIMONIALS ---------- */
+const stars = n => '★★★★★☆☆☆☆☆'.slice(5-n,10-n);
+document.getElementById('testiTrack').innerHTML = TESTIMONIALS.map(t=>`
+  <div class="testi-slide"><div class="testi-quote">
+    <div class="testi-stars" aria-label="${t[0]} out of 5 stars">${stars(t[0])}</div>
+    <blockquote>"${t[1]}"</blockquote>
+    <div class="testi-author"><b>${t[2]}</b><span>${t[3]}</span></div>
+  </div></div>`).join('');
+
+/* ---------- LENIS SMOOTH SCROLL ---------- */
+let lenis = null;
+if(!REDUCED && typeof Lenis !== 'undefined'){
+  try{
+    lenis = new Lenis({ duration:1.15, easing:t=>Math.min(1,1.001-Math.pow(2,-10*t)), smoothWheel:true });
+    function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+  }catch(e){ lenis = null; }
+}
+function scrollToTarget(sel){
+  const el = document.querySelector(sel); if(!el) return;
+  if(lenis) lenis.scrollTo(el,{offset:-70}); else el.scrollIntoView({behavior:'smooth'});
+}
+
+/* ---------- ANCHOR NAV + SMOOTH SCROLL ---------- */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const id=a.getAttribute('href'); if(id.length<2) return;
+    e.preventDefault(); closeMenu(); scrollToTarget(id);
+  });
+});
+
+/* ---------- HEADER SHRINK + SCROLL PROGRESS + TO-TOP ---------- */
+const header=document.getElementById('header');
+const prog=document.querySelector('.scroll-progress');
+const toTop=document.getElementById('toTop');
+function onScroll(y){
+  header.classList.toggle('shrink', y>60);
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  prog.style.transform=`scaleX(${h>0?y/h:0})`;
+  toTop.classList.toggle('show', y>600);
+}
+if(lenis){ lenis.on('scroll',({scroll})=>onScroll(scroll)); }
+window.addEventListener('scroll',()=>onScroll(window.scrollY||window.pageYOffset),{passive:true});
+onScroll(0);
+toTop.addEventListener('click',()=>{ lenis?lenis.scrollTo(0):window.scrollTo({top:0,behavior:'smooth'}); });
+
+/* ---------- MOBILE MENU ---------- */
+const burger=document.getElementById('burger');
+function closeMenu(){ document.body.classList.remove('menu-open'); burger.setAttribute('aria-expanded','false'); if(lenis)lenis.start(); }
+burger.addEventListener('click',()=>{
+  const open=document.body.classList.toggle('menu-open');
+  burger.setAttribute('aria-expanded',open?'true':'false');
+  if(open){ if(lenis)lenis.stop(); } else { if(lenis)lenis.start(); }
+});
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeMenu(); });
+
+/* ---------- ACTIVE NAV (ScrollSpy) ---------- */
+const sections=[...document.querySelectorAll('section[id]')];
+const navMap={};
+document.querySelectorAll('.nav-links a').forEach(a=>{ navMap[a.getAttribute('href').slice(1)]=a; });
+const spy=new IntersectionObserver(entries=>{
+  entries.forEach(en=>{
+    if(en.isIntersecting){
+      const id=en.target.id;
+      document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));
+      // map sub-sections to closest nav item
+      const target=navMap[id]||navMap[{testimonials:'gallery',location:'contact',booking:'services'}[id]];
+      if(target) target.classList.add('active');
+    }
+  });
+},{rootMargin:'-45% 0px -50% 0px'});
+sections.forEach(s=>spy.observe(s));
+
+/* ---------- REVEAL ON SCROLL ---------- */
+if(REDUCED){
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+}else{
+  const revObs=new IntersectionObserver(entries=>{
+    entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); revObs.unobserve(en.target); } });
+  },{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+}
+
+/* ---------- GSAP PARALLAX ---------- */
+if(!REDUCED && window.gsap && window.ScrollTrigger){
+  gsap.registerPlugin(ScrollTrigger);
+  if(lenis) lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(t=>{ if(lenis) {} });
+  // hero background parallax
+  gsap.to('#heroBg',{ yPercent:18, ease:'none',
+    scrollTrigger:{ trigger:'#home', start:'top top', end:'bottom top', scrub:true }});
+  // about visual subtle parallax
+  gsap.utils.toArray('.about-visual').forEach(el=>{
+    gsap.fromTo(el,{y:40},{y:-40,ease:'none',
+      scrollTrigger:{trigger:el,start:'top bottom',end:'bottom top',scrub:true}});
+  });
+}
+
+/* ---------- ANIMATED COUNTERS ---------- */
+const counters=document.querySelectorAll('.count');
+const cObs=new IntersectionObserver(entries=>{
+  entries.forEach(en=>{
+    if(!en.isIntersecting) return;
+    const el=en.target, target=+el.dataset.target, suf=el.dataset.suffix||'';
+    if(REDUCED){ el.textContent=target+suf; cObs.unobserve(el); return; }
+    const dur=1600, t0=performance.now();
+    (function tick(now){
+      const p=Math.min(1,(now-t0)/dur), eased=1-Math.pow(1-p,3);
+      el.textContent=Math.round(target*eased)+suf;
+      if(p<1) requestAnimationFrame(tick);
+    })(t0);
+    cObs.unobserve(el);
+  });
+},{threshold:0.6});
+counters.forEach(c=>cObs.observe(c));
+
+/* ---------- 3D TILT ---------- */
+if(!TOUCH && !REDUCED && window.VanillaTilt){
+  VanillaTilt.init(document.querySelectorAll('[data-tilt]'),{
+    max:8, speed:400, glare:true, 'max-glare':0.18, scale:1.02, perspective:900, gyroscope:false
+  });
+}
+
+/* ---------- CUSTOM CURSOR ---------- */
+if(!TOUCH && !REDUCED){
+  document.body.classList.add('using-cursor');
+  const dot=document.querySelector('.cursor-dot'), ring=document.querySelector('.cursor-ring');
+  let mx=0,my=0,rx=0,ry=0;
+  window.addEventListener('mousemove',e=>{ mx=e.clientX; my=e.clientY; dot.style.left=mx+'px'; dot.style.top=my+'px'; });
+  (function loop(){ rx+=(mx-rx)*0.18; ry+=(my-ry)*0.18; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(loop); })();
+  document.querySelectorAll('a,button,.svc-card,.near-card,.stay-opt,.g-item,input,select,textarea').forEach(el=>{
+    el.addEventListener('mouseenter',()=>ring.classList.add('hover'));
+    el.addEventListener('mouseleave',()=>ring.classList.remove('hover'));
+  });
+}
+
+/* ---------- LIGHTBOX ---------- */
+if(window.GLightbox){
+  GLightbox({ selector:'.glightbox', loop:true, touchNavigation:true, keyboardNavigation:true });
+}
+
+/* ---------- TESTIMONIAL CAROUSEL ---------- */
+(function(){
+  const track=document.getElementById('testiTrack');
+  const dotsWrap=document.getElementById('testiDots');
+  const n=TESTIMONIALS.length; let idx=0, timer=null;
+  for(let i=0;i<n;i++){ const d=document.createElement('button'); d.className='testi-dot'+(i===0?' active':'');
+    d.setAttribute('aria-label','Go to review '+(i+1)); d.addEventListener('click',()=>go(i)); dotsWrap.appendChild(d); }
+  const dots=[...dotsWrap.children];
+  function go(i){ idx=(i+n)%n; track.style.transform=`translateX(-${idx*100}%)`;
+    dots.forEach((d,j)=>d.classList.toggle('active',j===idx)); restart(); }
+  function restart(){ if(REDUCED) return; clearInterval(timer); timer=setInterval(()=>go(idx+1),6000); }
+  document.getElementById('testiNext').addEventListener('click',()=>go(idx+1));
+  document.getElementById('testiPrev').addEventListener('click',()=>go(idx-1));
+  restart();
+})();
+
+/* ---------- BOOKING: STAY OPTION SELECT ---------- */
+let selectedStay='Premium AC Room';
+document.querySelectorAll('.stay-opt').forEach(opt=>{
+  opt.addEventListener('click',()=>{
+    document.querySelectorAll('.stay-opt').forEach(o=>o.classList.remove('active'));
+    opt.classList.add('active'); selectedStay=opt.dataset.stay;
+  });
+});
+
+/* ---------- BOOKING: VALIDATE + WHATSAPP ---------- */
+const form=document.getElementById('bookForm');
+function setErr(id,on){ const f=document.getElementById(id); f.classList.toggle('err',on);
+  const m=f.parentElement.querySelector('.msg'); if(m) m.classList.toggle('show',on); }
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  const v=id=>document.getElementById(id).value.trim();
+  let ok=true;
+  const checkin=v('checkin'),checkout=v('checkout'),guests=v('guests'),
+        name=v('name'),email=v('email'),phone=v('phone'),
+        roomtype=v('roomtype'),requests=v('requests');
+  const emailOk=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const datesOk = checkin && checkout && (new Date(checkout) > new Date(checkin));
+
+  setErr('checkin',!checkin); if(!checkin)ok=false;
+  setErr('checkout',!datesOk); if(!datesOk)ok=false;
+  setErr('guests',!guests); if(!guests)ok=false;
+  setErr('name',!name); if(!name)ok=false;
+  setErr('email',!emailOk); if(!emailOk)ok=false;
+  setErr('phone',!phone); if(!phone)ok=false;
+
+  if(!ok){
+    const firstErr=form.querySelector('.err');
+    if(firstErr){ const y=firstErr.getBoundingClientRect().top+window.scrollY-140;
+      lenis?lenis.scrollTo(y):window.scrollTo({top:y,behavior:'smooth'}); firstErr.focus(); }
+    return;
+  }
+
+  const msg =
+`*New Booking Request — Azad Home Stay*
+
+*Stay Option:* ${selectedStay}
+*Check-In:* ${checkin}
+*Check-Out:* ${checkout}
+*Guests:* ${guests}
+*Preferred Room Type:* ${roomtype||'No preference'}
+
+*Name:* ${name}
+*Email:* ${email}
+*Phone:* ${phone}
+
+*Special Requests:* ${requests||'None'}
+
+Looking forward to staying with you!`;
+
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`,'_blank','noopener');
+});
+
+/* ---------- SET DATE MINIMUMS ---------- */
+(function(){
+  const today=new Date().toISOString().split('T')[0];
+  const ci=document.getElementById('checkin'), co=document.getElementById('checkout');
+  ci.min=today; co.min=today;
+  ci.addEventListener('change',()=>{ co.min=ci.value||today; if(co.value && co.value<ci.value) co.value=''; });
+})();
+
+/* ---------- VIDEO SHOWCASE (multi) ---------- */
+document.querySelectorAll('.video-frame').forEach(frame=>{
+  const v=frame.querySelector('.tour-vid'), btn=frame.querySelector('.video-play');
+  if(!v||!btn) return;
+  function toggle(){
+    if(v.paused){
+      document.querySelectorAll('.tour-vid').forEach(o=>{ if(o!==v) o.pause(); });
+      v.muted=false; v.play();
+    } else {
+      v.pause();
+    }
+  }
+  btn.addEventListener('click',e=>{ e.stopPropagation(); toggle(); });
+  v.addEventListener('click',toggle);          // click video to pause/resume
+  v.addEventListener('pause',()=>btn.classList.remove('hidden'));
+  v.addEventListener('play',()=>btn.classList.add('hidden'));
+});
+
+</script>
+</body>
+</html>
